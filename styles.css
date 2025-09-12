@@ -1,0 +1,366 @@
+/* Reset y configuración base */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* {
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", system-ui, sans-serif;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #002338  0%, #025579  100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Barra de búsqueda */
+.search-container {
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    position: relative;
+}
+
+.search-box {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-box:focus {
+    background: rgba(255,255,255,1);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+/* Grid de planillas */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Recuadros de planillas */
+.sheet-box {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.sheet-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.sheet-box:hover::before {
+    left: 100%;
+}
+
+.sheet-box:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    border-color: rgba(255,255,255,0.4);
+}
+
+.sheet-box.active.color-green {
+    background: #FFFFFF;
+    border-color: #ACC811;
+    box-shadow: 0 0 25px rgba(1, 85, 3, 0.308);
+}
+
+/* Azul - Para planillas con color azul */
+.sheet-box.active.color-blue {
+    background: rgba(33, 150, 243, 0.15);
+    border-color: #2196F3;
+    box-shadow: 0 0 25px rgba(33, 150, 243, 0.4);
+}
+
+/* Rojo - Para planillas con color rojo */
+.sheet-box.active.color-red {
+    background: rgb(230, 217, 217);
+    border-color: #E10B17;
+    box-shadow: 0 0 25px hsla(4, 98%, 24%, 0);
+}
+
+/* Morado - Para planillas con color morado */
+.sheet-box.active.color-purple {
+    background: rgba(156, 39, 176, 0.15);
+    border-color: #9C27B0;
+    box-shadow: 0 0 25px rgba(156, 39, 176, 0.4);
+}
+
+/* Naranja - Para planillas con color naranja */
+.sheet-box.active.color-orange {
+    background: rgba(255, 152, 0, 0.15);
+    border-color: #FF9800;
+    box-shadow: 0 0 25px rgba(255, 152, 0, 0.4);
+}
+
+/* Verde azulado - Para planillas con color teal */
+.sheet-box.active.color-teal {
+    background: rgb(255, 255, 255);
+    border-color: #da7c03;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.267);
+}
+
+/* Índigo - Para planillas con color índigo */
+.sheet-box.active.color-indigo {
+    background: rgb(226, 229, 255);
+    border-color: #2F2971;
+    box-shadow: 0 0 25px rgba(63, 81, 181, 0.4);
+}
+
+/* Rosa - Para planillas con color rosa */
+.sheet-box.active.color-pink {
+    background: rgba(233, 30, 99, 0.15);
+    border-color: #E91E63;
+    box-shadow: 0 0 25px rgba(233, 30, 99, 0.4);
+}
+
+/* Cian - Para planillas con color cian */
+.sheet-box.active.color-cyan {
+    background: rgba(0, 188, 212, 0.15);
+    border-color: #00BCD4;
+    box-shadow: 0 0 25px rgba(0, 188, 212, 0.4);
+}
+
+/* Lima - Para planillas con color lima */
+.sheet-box.active.color-lime {
+    background: rgba(205, 220, 57, 0.15);
+    border-color: #CDDC39;
+    box-shadow: 0 0 25px rgba(205, 220, 57, 0.4);
+}
+
+/* Naranja intenso - Para planillas con color deep-orange */
+.sheet-box.active.color-deep-orange {
+    background: rgba(255, 87, 34, 0.15);
+    border-color: #FF5722;
+    box-shadow: 0 0 25px rgba(255, 87, 34, 0.4);
+}
+
+/* Amarillo - Para planillas con color amarillo */
+.sheet-box.active.color-yellow {
+    background: rgb(233, 226, 206);
+    border-color: #FDEA14;
+    box-shadow: 0 0 25px rgba(255, 193, 7, 0);
+}
+
+/* Iconos de las planillas */
+.sheet-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* COLORES INDIVIDUALES - Modifica estos gradientes para cambiar colores */
+.sheet-icon.color-green { 
+    background: linear-gradient(45deg, #4CAF50, #81C784); 
+}
+
+.sheet-icon.color-blue { 
+    background: linear-gradient(45deg, #2196F3, #64B5F6); 
+}
+
+.sheet-icon.color-red { 
+    background: linear-gradient(45deg, #e66d64, #eb6764); 
+}
+
+.sheet-icon.color-purple { 
+    background: linear-gradient(45deg, #9C27B0, #BA68C8); 
+}
+
+.sheet-icon.color-orange { 
+    background: linear-gradient(45deg, #FF9800, #FFB74D); 
+}
+
+.sheet-icon.color-teal { 
+    background: linear-gradient(45deg, #009688, #4DB6AC); 
+}
+
+.sheet-icon.color-indigo { 
+    background: linear-gradient(45deg, #3F51B5, #7986CB); 
+}
+
+.sheet-icon.color-pink { 
+    background: linear-gradient(45deg, #E91E63, #F06292); 
+}
+
+.sheet-icon.color-cyan { 
+    background: linear-gradient(45deg, #00BCD4, #4DD0E1); 
+}
+
+.sheet-icon.color-lime { 
+    background: linear-gradient(45deg, #CDDC39, #D4E157); 
+}
+
+.sheet-icon.color-deep-orange { 
+    background: linear-gradient(45deg, #FF5722, #FF7043); 
+}
+
+.sheet-icon.color-yellow { 
+    background: linear-gradient(45deg, #FFC107, #FFD54F); 
+}
+
+.sheet-box:hover .sheet-icon {
+    transform: rotate(5deg) scale(1.1);
+}
+
+/* Títulos y estados */
+.sheet-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.sheet-status {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.sheet-status.open {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+}
+
+/* Botón agregar planilla */
+.add-sheet {
+    background: rgba(255,255,255,0.1);
+    border: 2px dashed rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 180px;
+}
+
+.add-sheet:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.9);
+}
+
+.add-icon {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* Utilidades */
+.hidden {
+    display: none;
+}
+
+/* Estadísticas */
+.stats {
+    text-align: center;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+/* Botón de actualizar */
+.refresh-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.4);
+    transition: all 0.3s ease;
+}
+
+.refresh-btn:hover {
+    transform: scale(1.1) rotate(180deg);
+    box-shadow: 0 8px 30px rgba(255, 107, 107, 0.6);
+}
+
+/* Animaciones */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.sheet-box.opening {
+    animation: pulse 0.5s ease-in-out;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .header h1 {
+        font-size: 2em;
+    }
+    
+    .sheet-box {
+        padding: 25px;
+    }
+}

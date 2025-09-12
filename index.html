@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard YMCA Santiago</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Soporte para emojis y banderas */
+        * {
+            font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", system-ui, sans-serif;
+        }
+        
+        /* Clase específica para elementos con emojis/banderas */
+        .emoji, .bandera {
+            font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+            font-size: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1> PLANILLAS YMCA SANTIAGO</h1>
+        <p>"Que todos sean uno" (Juan 17:21)</p>
+    </div>
+
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="Buscar planilla..." id="searchInput">
+    </div>
+
+    <div class="stats" id="statsDisplay">
+        <!--Total: 0 planillas | Abiertas: 0-->
+    </div>
+
+    <div class="menu-container" id="menuContainer">
+        <!-- Las planillas se cargarán dinámicamente -->
+    </div>
+
+    <button class="refresh-btn" onclick="refreshOpenTabs()" title="Actualizar estado de pestañas">
+        🔄
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
