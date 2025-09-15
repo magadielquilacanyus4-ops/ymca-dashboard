@@ -52,21 +52,8 @@ const sheets = [
         url: 'https://docs.google.com/spreadsheets/d/1FKZePlBnkFgzr_Cd86ZFZcjCbtkL-6Jdx6EtIxPh76I/edit?gid=753207085#gid=753207085',
         icon: '🤽‍♂️',
         color: 'red'
-    },
-    {
-        id: 'cea_1_agosto',
-        name: 'CEA AGOSTO LU-MI-VI',
-        url: 'https://docs.google.com/spreadsheets/d/1QZy9xEP9DcqlR9wzvsQFZ1faxBECCzQ0vyT8L68_RBw/edit?gid=753207085#gid=753207085',
-        icon: '🧑‍⚕️​',
-        color: 'indigo'
-    },
-    {
-        id: 'cea_2_agosto',
-        name: 'CEA AGOSTO MA-JU',
-        url: 'https://docs.google.com/spreadsheets/d/1dFC8J8sx8AR9R6dfjfegf8-7tGtcSOmdo5A8azrcgjw/edit?gid=753207085#gid=753207085',
-        icon: '🧑‍⚕️',
-        color: 'indigo'
-    },
+    }
+    ,
     {
         id: 'cea_1_sep',
         name: 'CEA SEPTIEMBRE LU-MI-VI',
@@ -82,6 +69,20 @@ const sheets = [
         color: 'indigo'
     }
     ,
+     {
+        id: 'cea_1_oct',
+        name: 'CEA OCTUBRE LU-MI-VI',
+        url: 'https://docs.google.com/spreadsheets/d/1Wa6uetUZ3ioAJEcLQ_Qg12EA_vR8YEgy3KnDVOGxzvg/edit?gid=495214978#gid=495214978',
+        icon: '🧑‍⚕️',
+        color: 'indigo'
+    },
+    {
+        id: 'cea_2_oct', 
+        name: 'CEA OCTUBRE MA-JU',
+        url: 'https://docs.google.com/spreadsheets/d/1rxs7T74gB3KamjWkaEfjtYkN724L--6CV7yhnyM7Tdo/edit?gid=753207085#gid=753207085',
+        icon: '🧑‍⚕️',
+        color: 'indigo'
+    },
     {
         id: 'taller_1',
         name: 'TALLERES ADULTOS AGOSTO',
