@@ -167,6 +167,14 @@ const sheets = [
         url: 'https://docs.google.com/spreadsheets/d/1VDSvbkLsjfWn_Usrr9ehaQ8S-SfPN_wi44L6fk4ByHs/edit?gid=967268150#gid=967268150',
         icon: '🥋',
         color: 'teal'
+    },
+        ,
+            {
+        id: 'informe_1',
+        name: 'INFORME INGRESOS',
+        url: 'https://docs.google.com/spreadsheets/d/1kBNckvSv_ZIG3zyHOL_EeRX_yokI_L5-66LkHKv7W-s/edit?pli=1&gid=1563812976#gid=1563812976',
+        icon: '📝',
+        color: 'orange'
     }
 
 
