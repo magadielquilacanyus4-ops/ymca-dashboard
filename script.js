@@ -5,13 +5,6 @@
 
 const sheets = [
     {
-        id: 'informe_1',
-        name: 'INFORME INGRESOS',
-        url: 'https://docs.google.com/spreadsheets/d/1kBNckvSv_ZIG3zyHOL_EeRX_yokI_L5-66LkHKv7W-s/edit?pli=1&gid=1563812976#gid=1563812976',
-        icon: '📝',
-        color: 'orange'
-    },
-    {
         id: 'juveniles_lumi_vi',
         name: 'JUVENILES LU-MI-VI',
         url: 'https://docs.google.com/spreadsheets/d/1S0pPUKqU_y1oYRZ61M1A1zibMW-dl9F7gjUXqiRNxX8/edit?gid=1527763868#gid=1527763868',
