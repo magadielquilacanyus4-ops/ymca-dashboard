@@ -267,45 +267,31 @@ function openSheet(id, url, name) {
     }, 500);
 }
 
-function openNewTab(id, url, name, options = {}) {
+function openNewTab(id, url, name) {
     try {
-        // Calcular dimensiones para mitad derecha de la pantalla
-        const screenWidth = window.screen.availWidth;
-        const screenHeight = window.screen.availHeight;
+        // Configuración específica para pantalla 1920 x 1080
+        // Ocupa mitad derecha completa de la pantalla
+        const windowFeatures = [
+            'width=960',        // Mitad del ancho (1920 ÷ 2)
+            'height=1040',      // Alto completo menos barra de tareas (~40px)
+            'left=960',         // Desde el centro hacia la derecha
+            'top=0',            // Desde la parte superior
+            'resizable=yes',
+            'scrollbars=yes',
+            'status=no',
+            'menubar=no',
+            'toolbar=no',
+            'location=yes'
+        ].join(',');
         
-        // Configuración para ocupar mitad derecha de la pantalla
-        const defaultConfig = {
-            width: Math.floor(screenWidth / 2),  // Mitad del ancho de pantalla
-            height: screenHeight,                // Alto completo de pantalla
-            left: Math.floor(screenWidth / 2),   // Comenzar desde el centro hacia la derecha
-            top: 0,                             // Desde la parte superior
-            resizable: 'yes',                   // Permitir redimensionar
-            scrollbars: 'yes',                  // Mostrar barras de desplazamiento si es necesario
-            status: 'no',                       // No mostrar barra de estado
-            menubar: 'no',                      // No mostrar barra de menú
-            toolbar: 'no',                      // No mostrar barra de herramientas
-            location: 'yes'                     // Mostrar barra de dirección
-        };
-        
-        // Combinar configuración por defecto con opciones personalizadas
-        const config = { ...defaultConfig, ...options };
-        
-        // Construir la cadena de características de la ventana
-        const features = Object.entries(config)
-            .map(([key, value]) => `${key}=${value}`)
-            .join(',');
-        
-        console.log(`Configuración de ventana (mitad derecha): ${features}`);
+        console.log(`Abriendo ventana en mitad derecha (1920x1080): ${windowFeatures}`);
         
         // Usar un nombre específico para la ventana
-        const newTab = window.open(url, `sheet_${id}`, features);
+        const newTab = window.open(url, `sheet_${id}`, windowFeatures);
         
         if (newTab) {
             openTabs.set(id, newTab);
             console.log(`Abriendo nueva pestaña: ${name}`);
-            
-            // Opcional: Enfocar la nueva ventana
-            newTab.focus();
             
             // Verificar si la pestaña se cierra
             const checkClosed = setInterval(() => {
