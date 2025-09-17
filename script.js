@@ -273,7 +273,7 @@ function openNewTab(id, url, name) {
         // Ocupa mitad derecha completa de la pantalla
         const windowFeatures = [
             'width=960',        // Mitad del ancho (1920 ÷ 2)
-            'height=1040',      // Alto completo menos barra de tareas (~40px)
+            'height=1045',      // Alto completo menos barra de tareas (~40px)
             'left=960',         // Desde el centro hacia la derecha
             'top=0',            // Desde la parte superior
             'resizable=yes',
