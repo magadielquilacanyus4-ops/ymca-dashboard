@@ -267,20 +267,51 @@ function openSheet(id, url, name) {
     }, 500);
 }
 
-function openNewTab(id, url, name) {
+function openNewTab(id, url, name, options = {}) {
     try {
+        // Calcular dimensiones para mitad derecha de la pantalla
+        const screenWidth = window.screen.availWidth;
+        const screenHeight = window.screen.availHeight;
+        
+        // Configuración para ocupar mitad derecha de la pantalla
+        const defaultConfig = {
+            width: Math.floor(screenWidth / 2),  // Mitad del ancho de pantalla
+            height: screenHeight,                // Alto completo de pantalla
+            left: Math.floor(screenWidth / 2),   // Comenzar desde el centro hacia la derecha
+            top: 0,                             // Desde la parte superior
+            resizable: 'yes',                   // Permitir redimensionar
+            scrollbars: 'yes',                  // Mostrar barras de desplazamiento si es necesario
+            status: 'no',                       // No mostrar barra de estado
+            menubar: 'no',                      // No mostrar barra de menú
+            toolbar: 'no',                      // No mostrar barra de herramientas
+            location: 'yes'                     // Mostrar barra de dirección
+        };
+        
+        // Combinar configuración por defecto con opciones personalizadas
+        const config = { ...defaultConfig, ...options };
+        
+        // Construir la cadena de características de la ventana
+        const features = Object.entries(config)
+            .map(([key, value]) => `${key}=${value}`)
+            .join(',');
+        
+        console.log(`Configuración de ventana (mitad derecha): ${features}`);
+        
         // Usar un nombre específico para la ventana
-        const newTab = window.open(url, `sheet_${id}`, 'width=1200,height=800');
+        const newTab = window.open(url, `sheet_${id}`, features);
         
         if (newTab) {
             openTabs.set(id, newTab);
             console.log(`Abriendo nueva pestaña: ${name}`);
             
+            // Opcional: Enfocar la nueva ventana
+            newTab.focus();
+            
             // Verificar si la pestaña se cierra
             const checkClosed = setInterval(() => {
                 if (newTab.closed) {
                     openTabs.delete(id);
-                    updateTabStatus(id); // Solo actualizar el estado de esta pestaña específica
+                    updateTabStatus(id);
                     clearInterval(checkClosed);
                     console.log(`Pestaña cerrada: ${name}`);
                 }
@@ -294,7 +325,74 @@ function openNewTab(id, url, name) {
         window.open(url, '_blank');
     }
     
-    updateTabStatus(id); // Solo actualizar el estado de esta pestaña específica
+    updateTabStatus(id);
+}
+
+// Ejemplos de uso con diferentes configuraciones:
+
+// Uso básico (usa configuración por defecto)
+// openNewTab(1, 'https://example.com', 'Mi Pestaña');
+
+// Ventana pequeña en esquina superior derecha
+// openNewTab(2, 'https://example.com', 'Ventana Pequeña', {
+//     width: 800,
+//     height: 600,
+//     left: window.screen.width - 820,  // 20px del borde derecho
+//     top: 20
+// });
+
+// Ventana centrada en la pantalla
+// openNewTab(3, 'https://example.com', 'Ventana Centrada', {
+//     width: 1000,
+//     height: 700,
+//     left: (window.screen.width - 1000) / 2,
+//     top: (window.screen.height - 700) / 2
+// });
+
+// Ventana maximizada (casi pantalla completa)
+// openNewTab(4, 'https://example.com', 'Ventana Grande', {
+//     width: window.screen.availWidth - 100,
+//     height: window.screen.availHeight - 100,
+//     left: 50,
+//     top: 50
+// });
+
+// Función auxiliar para obtener configuraciones predefinidas
+function getWindowPreset(preset) {
+    const presets = {
+        small: {
+            width: 800,
+            height: 600,
+            left: 100,
+            top: 100
+        },
+        medium: {
+            width: 1200,
+            height: 800,
+            left: 200,
+            top: 100
+        },
+        large: {
+            width: 1600,
+            height: 1000,
+            left: 50,
+            top: 50
+        },
+        centered: {
+            width: 1200,
+            height: 800,
+            left: (window.screen.width - 1200) / 2,
+            top: (window.screen.height - 800) / 2
+        },
+        topRight: {
+            width: 800,
+            height: 600,
+            left: window.screen.width - 820,
+            top: 20
+        }
+    };
+    
+    return presets[preset] || presets.medium;
 }
 
 function updateTabStatus(id) {
