@@ -136,6 +136,14 @@ const sheets = [
         icon: '👶',
         color: 'yellow'
     }
+     ,
+    {
+        id: 'menores_5',
+        name: 'AFTER SCHOOL 2025',
+        url: 'https://docs.google.com/spreadsheets/d/1jIyRjF2QKtuZ-kzsDQ-CsFKlt7dCP42xWxo16q_6k6E/edit?gid=0#gid=0',
+        icon: '👶',
+        color: 'yellow'
+    }
     ,
     {
         id: 'menores_6',
