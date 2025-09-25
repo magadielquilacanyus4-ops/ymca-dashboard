@@ -28,7 +28,7 @@ const sheets = [
         {
         id: 'taller_12',
         name: 'TENIS DE MESA SEPTIEMBRE',
-        url: 'https://docs.google.com/spreadsheets/d/1Yp_k-drBkETBPAo6f2T0wlwiFv5Nxk-S33zTQfMKEsM/edit?gid=1905494563#gid=1905494563',
+        url: 'https://docs.google.com/spreadsheets/d/1t-y6f_H5S5CknNiNbkiHF5iTBVM_ZN8422qyYBaYGQg/edit?gid=311246911#gid=311246911',
         icon: '🏓',
         color: 'green'
     },
