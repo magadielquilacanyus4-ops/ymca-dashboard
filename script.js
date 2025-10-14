@@ -277,13 +277,23 @@ function openSheet(id, url, name) {
 
 function openNewTab(id, url, name) {
     try {
-        // Configuración específica para pantalla 1920 x 1080
-        // Ocupa mitad derecha completa de la pantalla
+        // Calcular dinámicamente el espacio disponible en la pantalla
+        const availWidth = window.screen.availWidth;
+        const availHeight = window.screen.availHeight;
+        const availLeft = window.screen.availLeft || 0;
+        const availTop = window.screen.availTop || 0;
+        
+        // Calcular mitad derecha de la pantalla disponible
+        const windowWidth = Math.floor(availWidth / 2);
+        const windowHeight = availHeight;
+        const windowLeft = availLeft + Math.floor(availWidth / 2);
+        const windowTop = availTop;
+        
         const windowFeatures = [
-            'width=960',        // Mitad del ancho (1920 ÷ 2)
-            'height=1050',      // Alto completo menos barra de tareas (~40px)
-            'left=960',         // Desde el centro hacia la derecha
-            'top=0',            // Desde la parte superior
+            `width=${windowWidth}`,
+            `height=${windowHeight}`,
+            `left=${windowLeft}`,
+            `top=${windowTop}`,
             'resizable=yes',
             'scrollbars=yes',
             'status=no',
@@ -292,7 +302,7 @@ function openNewTab(id, url, name) {
             'location=yes'
         ].join(',');
         
-        console.log(`Abriendo ventana en mitad derecha (1920x1080): ${windowFeatures}`);
+        console.log(`Abriendo ventana en mitad derecha - Disponible: ${availWidth}x${availHeight}, Ventana: ${windowWidth}x${windowHeight} en posición (${windowLeft}, ${windowTop})`);
         
         // Usar un nombre específico para la ventana
         const newTab = window.open(url, `sheet_${id}`, windowFeatures);
@@ -321,7 +331,6 @@ function openNewTab(id, url, name) {
     
     updateTabStatus(id);
 }
-
 // Ejemplos de uso con diferentes configuraciones:
 
 // Uso básico (usa configuración por defecto)
