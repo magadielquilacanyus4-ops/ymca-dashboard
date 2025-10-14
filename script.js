@@ -280,7 +280,7 @@ function openNewTab(id, url, name) {
         // Configuración específica para pantalla 1920 x 1080
         // Ocupa mitad derecha completa de la pantalla
         const windowFeatures = [
-            'width=850',        // Mitad del ancho (1920 ÷ 2)
+            'width=870',        // Mitad del ancho (1920 ÷ 2)
             'height=1050',      // Alto completo menos barra de tareas (~40px)
             'left=960',         // Desde el centro hacia la derecha
             'top=0',            // Desde la parte superior
