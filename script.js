@@ -78,7 +78,7 @@ const sheets = [
     {
         id: 'cea_2_nov', 
         name: 'CEA NOVIEMBRE MA-JU',
-        url: 'https://docs.google.com/spreadsheets/d/1_T8HY-jnFgmKgKsTPcLMQUNqKG_rMV-0Ev1pCo_nZi4/edit?gid=753207085#gid=753207085',
+        url: 'https://docs.google.com/spreadsheets/d/1O1VqbfWVrdLIC1i7Fa8aToF2JCPwe-LUmCqcoDvTAiU/edit?gid=401599887#gid=401599887',
         icon: '🧑‍⚕️',
         color: 'indigo'
     }
