@@ -84,17 +84,17 @@ const sheets = [
     }
     ,
     {
-        id: 'taller_2',
-        name: 'TALLERES ADULTOS SEPTIEMBRE',
-        url: 'https://docs.google.com/spreadsheets/d/1UYzTOcuvq21BgtoDsGHMcmkgwX-ELnVx4yHwizlu8t4/edit?gid=582939919#gid=582939919',
-        icon: '🎺',
-        color: 'indigo'
-    },
-     {
         id: 'taller_1',
         name: 'TALLERES ADULTOS OCTUBRE',
         url: 'https://docs.google.com/spreadsheets/d/1KUSeJvvLzNzJhAH6v5qmZetZoaJ1IhwspqIOUgtGiX8/edit?gid=582939919#gid=582939919',
         icon: '🪗',
+        color: 'indigo'
+    },
+    {
+        id: 'taller_2',
+        name: 'TALLERES ADULTOS NOVIEMBRE',
+        url: 'https://docs.google.com/spreadsheets/d/1oKjcLob8DETKdEjLe7FAxP2SIp4hFm4jj0oCkrLJZw0/edit?gid=582939919#gid=582939919',
+        icon: '🎺',
         color: 'indigo'
     }
     ,
