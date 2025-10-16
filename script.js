@@ -5,8 +5,8 @@
 
 const sheets = [
     {
-        id: 'CAMPAÑA LLAMADOS OCTUBRE',
-        name: 'call_octubre',
+        id: 'call_octubre',
+        name: 'LLAMADOS OCTUBRE',
         url: 'https://docs.google.com/spreadsheets/d/168o1238HX9n8rX1Y7SrIUfGCRHOKM-ET_loPuF9LwZg/edit?gid=0#gid=0',
         icon: '☎️',
         color: 'purple'
