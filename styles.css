@@ -128,9 +128,9 @@ body {
 
 /* Morado - Para planillas con color morado */
 .sheet-box.active.color-purple {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: #ea71ff6b;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.24);
+    background: rgb(253, 209, 255);
+    border-color: #f09eff;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0);
 }
 
 /* Naranja - Para planillas con color naranja */
