@@ -5,6 +5,13 @@
 
 const sheets = [
     {
+        id: 'CAMPAÑA LLAMADOS OCTUBRE',
+        name: 'call_octubre',
+        url: 'https://docs.google.com/spreadsheets/d/168o1238HX9n8rX1Y7SrIUfGCRHOKM-ET_loPuF9LwZg/edit?gid=0#gid=0',
+        icon: '☎️',
+        color: 'purple'
+    },
+    {
         id: 'juveniles_lumi_vi',
         name: 'JUVENILES LU-MI-VI',
         url: 'https://docs.google.com/spreadsheets/d/1S0pPUKqU_y1oYRZ61M1A1zibMW-dl9F7gjUXqiRNxX8/edit?gid=1527763868#gid=1527763868',
