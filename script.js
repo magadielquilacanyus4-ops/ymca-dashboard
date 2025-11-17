@@ -75,20 +75,6 @@ const sheets = [
         color: 'red'
     }
     ,
-     {
-        id: 'cea_1_oct',
-        name: 'CEA OCTUBRE LU-MI-VI',
-        url: 'https://docs.google.com/spreadsheets/d/1Wa6uetUZ3ioAJEcLQ_Qg12EA_vR8YEgy3KnDVOGxzvg/edit?gid=495214978#gid=495214978',
-        icon: '🧑‍⚕️',
-        color: 'indigo'
-    },
-    {
-        id: 'cea_2_oct', 
-        name: 'CEA OCTUBRE MA-JU',
-        url: 'https://docs.google.com/spreadsheets/d/1rxs7T74gB3KamjWkaEfjtYkN724L--6CV7yhnyM7Tdo/edit?gid=753207085#gid=753207085',
-        icon: '🧑‍⚕️',
-        color: 'indigo'
-    },
     {
         id: 'cea_1_nov',
         name: 'CEA NOVIEMBRE LU-MI-VI',
