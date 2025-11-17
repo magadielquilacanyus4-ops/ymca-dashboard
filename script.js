@@ -105,7 +105,7 @@ const sheets = [
     }
     ,
     {
-        id: 'cea_2_DICI', 
+        id: 'cea_2_dic1', 
         name: 'CEA DICIEMBRE LU-MI-VI',
         url: 'https://docs.google.com/spreadsheets/d/1QQUoVtmjLFyJhki5fw0Kr0XvIXWQ4QPlmfEeudmCdV8/edit?gid=753207085#gid=753207085',
         icon: '🧑‍⚕️',
@@ -113,7 +113,7 @@ const sheets = [
     }
     ,
         {
-        id: 'cea_2_DICI', 
+        id: 'cea_2_dic2', 
         name: 'CEA DICIEMBRE MA-JU',
         url: 'https://docs.google.com/spreadsheets/d/1EdRcHE_qt1rHW4EuWnaBTVYdH35mi5QlrObew65LimQ/edit?gid=753207085#gid=753207085',
         icon: '🧑‍⚕️',
