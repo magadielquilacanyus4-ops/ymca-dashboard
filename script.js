@@ -22,7 +22,7 @@ const sheets = [
         id: 'campamento_1',
         name: 'CAMPAMENTO JUVENILES',
         url: 'https://docs.google.com/spreadsheets/d/13qz7oLWu_TktWvyDeWWvksk_xHxOGQfgF5uRwcops3w/edit?gid=753207085#gid=753207085',
-        icon: '🎊',
+        icon: '🏕️',
         color: 'purple'
     },
     {
