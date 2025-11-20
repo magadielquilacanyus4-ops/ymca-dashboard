@@ -19,6 +19,13 @@ const sheets = [
         color: 'purple'
     },
     {
+        id: 'campamento_1',
+        name: 'CAMPAMENTO JUVENILES',
+        url: 'https://docs.google.com/spreadsheets/d/13qz7oLWu_TktWvyDeWWvksk_xHxOGQfgF5uRwcops3w/edit?gid=753207085#gid=753207085',
+        icon: '🎊',
+        color: 'purple'
+    },
+    {
         id: 'juveniles_lumi_vi',
         name: 'JUVENILES LU-MI-VI',
         url: 'https://docs.google.com/spreadsheets/d/1S0pPUKqU_y1oYRZ61M1A1zibMW-dl9F7gjUXqiRNxX8/edit?gid=1527763868#gid=1527763868',
