@@ -5,15 +5,15 @@
 
 const sheets = [
     {
-        id: 'call_octubre',
-        name: 'LLAMADOS OCTUBRE',
-        url: 'https://docs.google.com/spreadsheets/d/1oQyoh-k6wYb22QcGZn9AimBvqrd1lNpEkIN90pg__AM/edit?gid=0#gid=0',
-        icon: '☎️',
-        color: 'purple'
+        id: 'vacaciones_1',
+        name: 'VACACIONES ENTRETENIDAS',
+        url: 'https://docs.google.com/spreadsheets/d/12TX6gqkdrhJ3l_WslFQK9DHZWSxaTl_OACRAwOf1I-E/edit?gid=311246911#gid=311246911',
+        icon: '🎡',
+        color: 'yellow'
     },
     {
         id: 'ventas-1',
-        name: 'VENTAS CARNABAL',
+        name: 'VENTAS CARNAVAL',
         url: 'https://docs.google.com/spreadsheets/d/1X20T6ZvSnWDMlgvkkelORXE2xNo9w05_JLlttq27d1o/edit?gid=597098134#gid=597098134',
         icon: '🎊',
         color: 'purple'
